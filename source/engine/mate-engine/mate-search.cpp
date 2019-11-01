@@ -9,6 +9,25 @@
 using namespace std;
 using namespace Search;
 
+void user_test(Position& pos, std::istringstream& is)
+{
+  StateInfo st;
+  Move m = make_move(SQ_77, SQ_76); // 初期局面での76歩
+
+	ASSERT_LV3(pos.pseudo_legal(m));
+	ASSERT_LV2(pos.legal(m));
+
+	cout << "Make a move " << endl;
+  pos.do_move(m,st);
+	ASSERT_LV3(is_ok(pos));
+  cout << pos;
+
+	// cout << "Undo the move " << endl;
+  // pos.undo_move(m); // 局面を元に戻してみる
+	// ASSERT_LV3(is_ok(pos));
+  // cout << pos;
+}
+
 // --- 詰み将棋探索
 
 // df-pn with Threshold Controlling Algorithm (TCA)の実装。

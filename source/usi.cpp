@@ -692,10 +692,8 @@ void USI::loop(int argc, char* argv[])
 		// 思考エンジンの準備が出来たかの確認
 		else if (token == "isready") is_ready_cmd(pos,states);
 
-#if defined(USER_ENGINE)
 		// ユーザーによる実験用コマンド。user.cppのuser()が呼び出される。
 		else if (token == "user") user_test(pos, is);
-#endif
 
 		// 現在の局面を表示する。(デバッグ用)
 		else if (token == "d") cout << pos << endl;
