@@ -20,8 +20,8 @@
 
 #if !defined (USE_MAKEFILE)
 
-#define YANEURAOU_ENGINE_NNUE    // やねうら王2018 with お多福Lab。(開発中2018/01/01～)
-//#define MATE_ENGINE                      // 詰め将棋solverとしてリリースする場合。(開発中2017/05/06～)
+// #define YANEURAOU_ENGINE_NNUE    // やねうら王2018 with お多福Lab。(開発中2018/01/01～)
+#define MATE_ENGINE                      // 詰め将棋solverとしてリリースする場合。(開発中2017/05/06～)
 //#define USER_ENGINE                      // ユーザーの思考エンジン
 
 #else
@@ -53,8 +53,8 @@
 // ターゲットCPUのところだけdefineしてください。(残りは自動的にdefineされます。)
 
 //#define USE_AVX512
-#define USE_AVX2
-//#define USE_SSE42
+//#define USE_AVX2
+#define USE_SSE42
 //#define USE_SSE41
 //#define USE_SSE2
 //#define NO_SSE
