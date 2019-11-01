@@ -21,8 +21,8 @@
 #if !defined (USE_MAKEFILE)
 
 // #define YANEURAOU_ENGINE_NNUE    // やねうら王2018 with お多福Lab。(開発中2018/01/01～)
-#define MATE_ENGINE                      // 詰め将棋solverとしてリリースする場合。(開発中2017/05/06～)
-//#define USER_ENGINE                      // ユーザーの思考エンジン
+// #define MATE_ENGINE                      // 詰め将棋solverとしてリリースする場合。(開発中2017/05/06～)
+#define USER_ENGINE                      // ユーザーの思考エンジン
 
 #else
 
@@ -348,7 +348,15 @@
 
 #if defined(USER_ENGINE)
 #define ENGINE_NAME "YaneuraOu user engine"
-#define EVAL_KPP
+#define KEEP_LAST_MOVE
+#undef  MAX_PLY_NUM
+#define MAX_PLY_NUM 2000
+#define USE_SEE
+#define USE_MATE_1PLY
+#define EVAL_MATERIAL
+//#define LONG_EFFECT_LIBRARY
+#define USE_KEY_AFTER
+#define ENABLE_TEST_CMD
 #endif
 
 // --------------------
